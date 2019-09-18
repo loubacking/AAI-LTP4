@@ -4,13 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/home/home.component';
-import { HeaderComponent } from './modules/home/components/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SliderComponent } from './modules/home/components/slider/slider.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SliderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
