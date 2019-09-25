@@ -7,6 +7,12 @@ import { HomeComponent } from './modules/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SliderComponent } from './modules/home/components/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HorizontalSearchComponent } from './modules/home/components/horizontal-search/horizontal-search.component';
+import { JoinUsComponent } from './modules/home/components/join-us/join-us.component';
+import { FeaturedVehiculsComponent } from './modules/home/components/featured-vehiculs/featured-vehiculs.component';
+import { OurParternsComponent } from './modules/home/components/our-parterns/our-parterns.component';
+import { OurAgentsComponent } from './modules/home/components/our-agents/our-agents.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +20,12 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     HeaderComponent,
     SliderComponent,
-    FooterComponent
+    FooterComponent,
+    HorizontalSearchComponent,
+    JoinUsComponent,
+    FeaturedVehiculsComponent,
+    OurParternsComponent,
+    OurAgentsComponent,
   ],
   imports: [
     BrowserModule,
