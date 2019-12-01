@@ -1,45 +1,41 @@
-<header class="simple-header for-sticky ">
+<header class="simple-header for-sticky" style="position: relative">
   <div class="top-bar">
-      <div class="container">
-          <ul class="contact-item">
-              <li><i class="fa fa-envelope-o"></i>autoinstrucional@email.com</li>
-              <li><i class="fa fa-mobile"></i>+1 333 44 555 / +1 333 44 500</li>
-          </ul>
-      </div>
-  </div><!-- Top bar -->
+    <div class="container">
+      <ul class="contact-item">
+        <li><i class="fa fa-envelope-o"></i>autoinstrucional@email.com</li>
+        <li><i class="fa fa-mobile"></i>+1 333 44 555 / +1 333 44 500</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Top bar -->
   <div class="menu">
-      <div class="container">
-          <div class="logo">
-              <a href="index.html" title="">
-                  <i class="fa fa-get-pocket"></i>
-                  <span>Auto Instrucional</span>
-                  <strong>Linguagens e Técnicas</strong>
-              </a>
-          </div><!-- LOGO -->
-          <div class="popup-client">
-              <span>Entrar</span>
-          </div>
-          <span class="menu-toggle"><i class="fa fa-bars"></i></span>
-          <nav>
-              <h1 class="nocontent outline">--- Main Navigation ---</h1>
-              <ul>
-                  <li class="menu-item-has-children">
-                      <a href="#" title="">HOME</a>
-                  </li>
-                  <li class="menu-item-has-children">
-                      <a href="#" title="">VEÍCULOS</a>
-                      <ul>
-                          <li><a href="vehiculs3.html" title="">Super</a></li>
-                          <li><a href="vehiculs.html" title="">List</a></li>
-                          <li><a href="vehiculs2.html" title="">Grid</a></li>
-                          <li><a href="vehicul.html" title="">Detalhes</a></li>
-                      </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a href="#" title="">BLOG</a></li>
-                  <li><a href="contact.html" title="">CONTATO</a></li>
-              </ul>
-          </nav>
-
+    <div class="container">
+      <div class="logo">
+        <a [routerLink]="['/']" title="">
+          <i class="fa fa-get-pocket"></i>
+          <span>Auto Instrucional</span>
+          <strong>Linguagens e Técnicas</strong>
+        </a>
       </div>
+      <!-- LOGO -->
+      <div class="popup-client">
+        <span>
+          <a [routerLink]="['/dashboard']">Entrar </a>
+        </span>
+      </div>
+      <span class="menu-toggle"><i class="fa fa-bars"></i></span>
+      <nav>
+        <h1 class="nocontent outline">--- Main Navigation ---</h1>
+        <ul>
+          <li class="menu-item-has-children">
+            <a [routerLink]="['/']" title="">HOME</a>
+          </li>
+          <li class="menu-item-has-children">
+            <a [routerLink]="['/vehicul']" title="">VEÍCULOS</a>
+          </li>
+          <li><a [routerLink]="['/contact']" title="">CONTATO</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>

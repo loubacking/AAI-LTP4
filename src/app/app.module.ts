@@ -25,6 +25,7 @@ import { ContactComponent } from './modules/contact/contact.component';
 import { ContHeaderComponent } from './modules/contact/components/cont-header/cont-header.component';
 import { ContInfoComponent } from './modules/contact/components/cont-info/cont-info.component';
 import { ContFormComponent } from './modules/contact/components/cont-form/cont-form.component';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { ContFormComponent } from './modules/contact/components/cont-form/cont-f
     ContHeaderComponent,
     ContInfoComponent,
     ContFormComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
