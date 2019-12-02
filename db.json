@@ -1,0 +1,46 @@
+{
+  "vehiculs": [
+    {
+      "id": 1,
+      "name": "BMW X5",
+      "image": "https://s2.glbimg.com/lWP9-bXtnbt6i7ikWCHWFAeU_4Q=/620x413/e.glbimg.com/og/ed/f/original/2018/06/06/p90304019_highres_the-all-new-bmw-x5-0.jpg",
+      "price": "R$ 455.950,00",
+      "type": "Esportivo"
+    },
+    {
+      "id": 2,
+      "name": "BMW I8",
+      "image": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImhtcjFkY2pxZncwMjItU1REVlRMUFQiLCJ3IjpbeyJmbiI6IjZtZ2p3bHA3a2dkYjItU1REVlRMUFQiLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.F2IEJn8hbk1hSOjsP7bvqal-7dwTyLQf1_OGIiZH4fc/image;s=1080x720;cars_;/106122332_;slot=1;filename=eyJmbiI6ImhtcjFkY2pxZncwMjItU1REVlRMUFQiLCJ3IjpbeyJmbiI6IjZtZ2p3bHA3a2dkYjItU1REVlRMUFQiLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.F2IEJn8hbk1hSOjsP7bvqal-7dwTyLQf1+OGIiZH4fc_rev001.jpg",
+      "price": "R$ 649.950,00",
+      "type": "Esportivo"
+    },
+    {
+      "id": 3,
+      "name": "Ferrari 488",
+      "image": "https://s.aolcdn.com/commerce/autodata/images/USC60FRC211A01301.jpg",
+      "price": "R$ 2.987.000,00",
+      "type": "Esportivo"
+    },
+    {
+      "id": 4,
+      "name": "Fiat Argo",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Fiat_Argo_2017b.jpg",
+      "price": "R$ 49.590,00",
+      "type": "Subcompacto"
+    },
+    {
+      "id": 5,
+      "name": "Volkswagen Passat",
+      "image": "https://s.aolcdn.com/commerce/autodata/images/USC90VWC041A021001.jpg",
+      "price": "R$ 168.690,00",
+      "type": "Carro médio"
+    },
+    {
+      "id": 6,
+      "name": "Volvo XC60",
+      "image": "https://auto.ndtvimg.com/car-images/big/volvo/xc60/volvo-xc60.jpg?v=6",
+      "price": "R$ 260.950,00",
+      "type": "Esportivo"
+    }
+  ]
+}

@@ -8,7 +8,15 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Criar</a>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="newVehicul()"
+          data-toggle="modal"
+          data-target="#modal-default"
+        >
+          Criar
+        </button>
       </li>
     </ul>
   </div>
@@ -16,46 +24,126 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Imagem</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Ação</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+    <tr *ngFor="let vehicul of vehiculs">
+      <th>{{ vehicul.name }}</th>
+      <td><img [src]="vehicul.image" style="width: 80px;" /></td>
+      <td>{{ vehicul.price }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn badge badge-success"
+          (click)="updateVehiculs(vehicul.id)"
+          style="margin-right: 12px; font-size: 12px;"
+        >
+          Editar
+        </button>
+        <button
+          type="button"
+          class="btn badge badge-danger"
+          (click)="deleteVehiculs(vehicul.id)"
+          style="font-size: 12px;"
+        >
+          Deletar
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
 
+<div id="modal-default" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Cadastro Veículos</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <form #form="ngForm">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nome</label>
+            <input
+              type="text"
+              required
+              class="form-control"
+              name="name"
+              [(ngModel)]="selectVehicul.name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Imagem Path</label>
+            <input
+              type="text"
+              class="form-control"
+              name="image"
+              [(ngModel)]="selectVehicul.image"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Preço</label>
+            <input
+              type="text"
+              class="form-control"
+              name="price"
+              [(ngModel)]="selectVehicul.price"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Tipo</label>
+            <input
+              type="text"
+              class="form-control"
+              name="type"
+              [(ngModel)]="selectVehicul.type"
+            />
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Fechar
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-dismiss="modal"
+            (click)="createVehicul()"
+            [disabled]="!form.form.valid"
+          >
+            Salvar
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+
 <script
-  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
   crossorigin="anonymous"
 ></script>
 <script
-  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
   crossorigin="anonymous"
 ></script>
 <script
-  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
   crossorigin="anonymous"
 ></script>

@@ -8,159 +8,23 @@
       <div class="col-md-12">
         <div class="vehiculs-sec">
           <div class="row">
-            <div class="col-md-4">
+            <div *ngFor="let vehicul of vehiculs" class="col-md-4">
               <div class="vehiculs-box">
                 <div class="vehiculs-thumb">
                   <img
+                    style="object-fit: contain;"
                     alt=""
-                    src="../../../../../assets/img/demo/vehicul4.jpg"
+                    [src]="vehicul.image"
                   />
-                  <a class="proeprty-sh-more" href="vehicul.html"
-                    ><i class="fa fa-angle-double-right"> </i
-                    ><i class="fa fa-angle-double-right"> </i
-                  ></a>
                   <p class="car-info-smal">
-                    Registration 2010<br />
-                    3.0 Diesel<br />
-                    230 HP<br />
-                    Body Coupe<br />
-                    80 000 Miles
-                  </p>
-                </div>
-                <h3><a title="" href="vehicul.html">Mercedes-Benz</a></h3>
-                <span class="price">$444000</span>
-              </div>
-              <!-- prop Box -->
-            </div>
-            <div class="col-md-4">
-              <div class="vehiculs-box">
-                <div class="vehiculs-thumb">
-                  <img
-                    alt=""
-                    src="../../../../../assets/img/demo/vehicul3.jpg"
-                  />
-                  <a class="proeprty-sh-more" href="vehicul.html"
-                    ><i class="fa fa-angle-double-right"> </i
-                    ><i class="fa fa-angle-double-right"> </i
-                  ></a>
-                  <p class="car-info-smal">
-                    Registration 2010<br />
-                    3.0 Diesel<br />
-                    230 HP<br />
-                    Body Coupe<br />
-                    80 000 Miles
+                    {{ vehicul.type }}
                   </p>
                 </div>
                 <h3>
-                  <a title="Mercedes-Benz" href="vehicul.html">Mercedes-Benz</a>
+                  <a [title]="vehicul.name" href="#">{{ vehicul.name }}</a>
                 </h3>
-                <span class="price">$789000</span>
+                <span class="price">{{ vehicul.price }}</span>
               </div>
-              <!-- prop Box -->
-            </div>
-            <div class="col-md-4">
-              <div class="vehiculs-box">
-                <div class="vehiculs-thumb">
-                  <img
-                    alt=""
-                    src="../../../../../assets/img/demo/vehicul2.jpg"
-                  />
-                  <a class="proeprty-sh-more" href="vehicul.html"
-                    ><i class="fa fa-angle-double-right"> </i
-                    ><i class="fa fa-angle-double-right"> </i
-                  ></a>
-                  <p class="car-info-smal">
-                    Registration 2010<br />
-                    3.0 Diesel<br />
-                    230 HP<br />
-                    Body Coupe<br />
-                    80 000 Miles
-                  </p>
-                </div>
-                <h3>
-                  <a title="Mercedes-Benz" href="vehicul.html">Mercedes-Benz</a>
-                </h3>
-                <span class="price">$380000</span>
-              </div>
-              <!-- prop Box -->
-            </div>
-            <div class="col-md-4">
-              <div class="vehiculs-box">
-                <div class="vehiculs-thumb">
-                  <img
-                    alt=""
-                    src="../../../../../assets/img/demo/vehicul4.jpg"
-                  />
-                  <a class="proeprty-sh-more" href="vehicul.html"
-                    ><i class="fa fa-angle-double-right"> </i
-                    ><i class="fa fa-angle-double-right"> </i
-                  ></a>
-                  <p class="car-info-smal">
-                    Registration 2010<br />
-                    3.0 Diesel<br />
-                    230 HP<br />
-                    Body Coupe<br />
-                    80 000 Miles
-                  </p>
-                </div>
-                <h3>
-                  <a title="Mercedes-Benz" href="vehicul.html">Mercedes-Benz</a>
-                </h3>
-                <span class="price">$1000000</span>
-              </div>
-              <!-- prop Box -->
-            </div>
-            <div class="col-md-4">
-              <div class="vehiculs-box">
-                <div class="vehiculs-thumb">
-                  <img
-                    alt=""
-                    src="../../../../../assets/img/demo/vehicul5.jpg"
-                  />
-                  <a class="proeprty-sh-more" href="vehicul.html"
-                    ><i class="fa fa-angle-double-right"> </i
-                    ><i class="fa fa-angle-double-right"> </i
-                  ></a>
-                  <p class="car-info-smal">
-                    Registration 2010<br />
-                    3.0 Diesel<br />
-                    230 HP<br />
-                    Body Coupe<br />
-                    80 000 Miles
-                  </p>
-                </div>
-                <h3>
-                  <a title="Mercedes-Benz" href="vehicul.html">Mercedes-Benz</a>
-                </h3>
-                <span class="price">$500000</span>
-              </div>
-              <!-- prop Box -->
-            </div>
-            <div class="col-md-4">
-              <div class="vehiculs-box">
-                <div class="vehiculs-thumb">
-                  <img
-                    alt=""
-                    src="../../../../../assets/img/demo/vehicul3.jpg"
-                  />
-                  <a class="proeprty-sh-more" href="vehicul.html"
-                    ><i class="fa fa-angle-double-right"> </i
-                    ><i class="fa fa-angle-double-right"> </i
-                  ></a>
-                  <p class="car-info-smal">
-                    Registration 2010<br />
-                    3.0 Diesel<br />
-                    230 HP<br />
-                    Body Coupe<br />
-                    80 000 Miles
-                  </p>
-                </div>
-                <h3>
-                  <a title="Mercedes-Benz" href="vehicul.html">Mercedes-Benz</a>
-                </h3>
-                <span class="price">$340000</span>
-              </div>
-              <!-- prop Box -->
             </div>
           </div>
         </div>
