@@ -29,6 +29,8 @@ import { ContFormComponent } from "./modules/contact/components/cont-form/cont-f
 import { DashboardComponent } from "./modules/dashboard/dashboard.component";
 import { FormsModule } from "@angular/forms";
 import { VehiculsService } from "./services/vehiculs.service";
+import { CreateComponent } from './modules/dashboard/create/create.component';
+import { EditComponent } from './modules/dashboard/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { VehiculsService } from "./services/vehiculs.service";
     ContHeaderComponent,
     ContInfoComponent,
     ContFormComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateComponent,
+    EditComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [VehiculsService],

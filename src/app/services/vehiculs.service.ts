@@ -12,23 +12,20 @@ export class VehiculsService {
     return this.http.get<Vehicul[]>(`${API_URL}/vehiculs`);
   }
 
-  addVehiculs(veh: Vehicul) {
-    this.http.post<Vehicul>(`${API_URL}/vehiculs`, veh).subscribe(() => {
-      this.getVehiculs();
-    });
+  getVehicul(id: number): Observable<Vehicul> {
+    return this.http.get<Vehicul>(`${API_URL}/vehiculs/${id}`);
   }
 
-  updateVehiculs(veh: Vehicul) {
-    this.http
-      .put<Vehicul>(`${API_URL}/vehiculs/${veh.id}`, veh)
-      .subscribe(() => {
-        this.getVehiculs();
-      });
+  addVehiculs(veh: Vehicul): Observable<Vehicul>  {
+    return this.http.post<Vehicul>(`${API_URL}/vehiculs`, veh);
   }
 
-  deleteVehiculs(id: number) {
-    this.http.delete<Vehicul>(`${API_URL}/vehiculs/${id}`).subscribe(() => {
-      this.getVehiculs();
-    });
+  updateVehiculs(veh: Vehicul): Observable<Vehicul> {
+    return this.http
+      .put<Vehicul>(`${API_URL}/vehiculs/${veh.id}`, veh);
+  }
+
+  deleteVehiculs(id: number): Observable<Vehicul>  {
+    return this.http.delete<Vehicul>(`${API_URL}/vehiculs/${id}`)
   }
 }
